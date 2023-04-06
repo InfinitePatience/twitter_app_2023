@@ -1,0 +1,33 @@
+// authForm.scss
+.container {
+  .authInput {
+    width:100%;
+    max-width:320px;
+    margin-bottom:10px; 
+    padding:10px; 
+    border-radius:30px;
+    background-color:rgba(255,255,255, 1);
+    font-size:12px;
+    color:#000;
+    &.authSubmit{
+      background:#04aaff;
+      color:#fff;
+      text-align:center;
+      cursor:pointer;
+    }
+  }
+  .authError {
+    font-size:12px;
+    font-weight:500;
+    color:tomato;
+    text-align:center;
+  }
+}
+.authSwitch {
+  display:block;
+  margin-top:10px;
+  margin-bottom:50px;
+  font-size:12px;
+  text-decoration:underline;
+  color:#04aaff; cursor:pointer;
+}
