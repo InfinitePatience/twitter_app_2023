@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "styles/tweetInsert.scss"
+import { updateProfile } from 'firebase/auth';
 
 function TweetInsert({userObj}) {
   console.log(userObj);
@@ -20,11 +21,12 @@ function TweetInsert({userObj}) {
         const response = await uploadString(storageRef, attachment, 'data_url'); // attachment를 storage에 저장
         console.log('response->', response);
         attachmentUrl = await getDownloadURL(ref(storage, response.ref)); //response.ref 는 https 주소가 됨. https 주소를 가져옴.
+
       }
       const docRef = await addDoc(collection(db, "tweets"), {
         text:tweet,
         createdAt: Date.now(),
-        creatorId: userObj.uid, // 문서를 누가 작성해는지 알아내기 위함. userObj는 로그인한 사용자 정보.
+        creatorId: userObj.uid, // 문서를 누가 작성했는지 알아내기 위함. userObj는 로그인한 사용자 정보.
         attachmentUrl
       });
       console.log("Document written with ID: ", docRef.id);

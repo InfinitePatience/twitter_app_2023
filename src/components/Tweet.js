@@ -45,7 +45,7 @@ function Tweet(props) { // 구조분해할당을 위해 받음
     setEditing(false);
   }
 
-  useEffect(() => {  //useEffect 를 만들어주는 이유는
+  useEffect(() => {
     let timeStamp = createdAt;
     const now = new Date(timeStamp);
     setNowDate(now.toUTCString());  //.toUTCString() .toDateString()

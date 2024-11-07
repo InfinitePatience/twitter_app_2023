@@ -8,7 +8,7 @@ import "styles/auth.scss";
 
 // createUserWithEmailAndPassword 신규 회원가입 사용자 , signInWithEmailAndPassword 기존 사용자
 
-// useState  -  true(A) false(B) 구분 하여 A가 나올경우 true B 가 나올경우 false 나오게 설정해주는 함수로 사용
+// useState  -  true(A) false(B) 구분 하여 A가 나올경우 true, B 가 나올경우 false 나오게 설정해주는 함수로 사용
 // onChange  -  A라는 값이 나왔을 때 onChange 함수로 바꿔주는 구문을 입력하여 바뀌게 해준다.
 //   name    -  input이 여러개일 경우 input에다가 name을 입력하여 누가 입력 되었는지 구분해준다.
 

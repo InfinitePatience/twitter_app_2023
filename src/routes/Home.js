@@ -44,7 +44,7 @@ function Home({userObj}) {
           <Tweet key={tweet.id} tweetObj={tweet} isOwner={tweet.creatorId === userObj.uid} />
         ))}
       </div>
-      <footer>&copy; {new Date().getFullYear()}Tweiiter app</footer>
+      <footer>&copy; {new Date().getFullYear()}Tweiter app</footer>
     </div>
   )
 }

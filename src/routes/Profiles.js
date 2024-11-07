@@ -38,6 +38,7 @@ const onSubmit = async (e) => {
     });
   }
 }
+
 const onChange = (e) => {
   const {target:{value}} = e; 
   setNewDisplayName(value);
